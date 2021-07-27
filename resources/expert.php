@@ -31,9 +31,6 @@ foreach($week as &$day) {
 print_r($week);
 
 new_exercise(5);
-// === Exercise 5 ===
-// The array should be printing every letter of the alphabet (a-z) but instead it does that + aa-yz
-// Fix the code so the for loop only pushes a-z in the array
 
 $arr = [];
 for ($letter = 'a'; $letter != 'aa'; $letter++) {
@@ -41,4 +38,43 @@ for ($letter = 'a'; $letter != 'aa'; $letter++) {
 }
 
 print_r($arr); // Array ([0] => a, [1] => b, [2] => c, ...) a-z alphabetical array
-//print_r($letter); // Array ([0] => a, [1] => b, [2] => c, ...) a-z alphabetical array
+
+new_exercise(6);
+// === Final exercise ===
+// The fixed code should echo the following at the bottom:
+// Here is the name: $name - $name2
+// $name variables are randomly combined as seen in the code, fix all the bugs whilst keeping the functionality!
+// Examples: captain strange, ant widow, iron man, ...
+$arr = [];
+
+
+function combineNames($str1 = "", $str2 = "") {
+    $params = [$str1, $str2];
+    foreach($params as &$param) {
+        if ($param == "") {
+            $param = randomHeroName();
+        }
+    }
+    echo implode($params, " - ");
+}
+
+
+function randomGenerate($arr, $amount) {
+    for ($i = $amount; $i > 0; $i--) {
+        array_push($arr, randomHeroName());
+    }
+
+    return $amount;
+}
+
+function randomHeroName()
+{
+    $hero_firstnames = ["captain", "doctor", "iron", "Hank", "ant", "Wasp", "the", "Hawk", "Spider", "Black", "Carol"];
+    $hero_lastnames = ["America", "Strange", "man", "Pym", "girl", "hulk", "eye", "widow", "panther", "daredevil", "marvel"]
+    $heroes = [$hero_firstnames, $hero_lastnames];
+    $randname = $heroes[rand(0,count($heroes))][rand(0, 10)];
+
+    echo $randname;
+}
+
+echo "Here is the name: " . combineNames();
