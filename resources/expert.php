@@ -58,14 +58,14 @@ function combineNames($str1 = "", $str2 = "") {
     return implode(" - " ,$params);
 }
 
-/*
+
 function randomGenerate($arr, $amount) {
     for ($i = $amount; $i > 0; $i--) {
         array_push($arr, randomHeroName());
     }
 
     return $amount;
-}*/
+}
 
 function randomHeroName($hero_firstnames = "", $hero_lastnames = "")
 {
