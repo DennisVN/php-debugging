@@ -59,13 +59,13 @@ function combineNames($str1 = "", $str2 = "") {
 }
 
 
-/*function randomGenerate($arr, $amount) {
+function randomGenerate($arr, $amount) {
     for ($i = $amount; $i > 0; $i--) {
         array_push($arr, randomHeroName());
     }
 
     return $amount;
-}*/
+}
 
 function randomHeroName()
 {
