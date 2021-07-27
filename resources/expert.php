@@ -59,7 +59,7 @@ function combineNames($str1 = "", $str2 = "") {
 }
 
 
-function randomGenerate($arr, $amount) {
+/*function randomGenerate($arr, $amount) {
     for ($i = $amount; $i > 0; $i--) {
         array_push($arr, randomHeroName());
     }
@@ -77,4 +77,4 @@ function randomHeroName()
     echo $randname;
 }
 
-echo "Here is the name: " . combineNames();
+echo "Here is the name: " . combineNames();*/
