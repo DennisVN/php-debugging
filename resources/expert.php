@@ -65,16 +65,16 @@ function combineNames($str1 = "", $str2 = "") {
     }
 
     return $amount;
-}
+}*/
 
 function randomHeroName()
 {
     $hero_firstnames = ["captain", "doctor", "iron", "Hank", "ant", "Wasp", "the", "Hawk", "Spider", "Black", "Carol"];
-    $hero_lastnames = ["America", "Strange", "man", "Pym", "girl", "hulk", "eye", "widow", "panther", "daredevil", "marvel"]
+    $hero_lastnames = ["America", "Strange", "man", "Pym", "girl", "hulk", "eye", "widow", "panther", "daredevil", "marvel"];
     $heroes = [$hero_firstnames, $hero_lastnames];
     $randname = $heroes[rand(0,count($heroes))][rand(0, 10)];
 
     echo $randname;
 }
 
-echo "Here is the name: " . combineNames();*/
+echo "Here is the name: " . combineNames();
